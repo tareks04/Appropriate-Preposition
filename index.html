@@ -201,7 +201,7 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .switch input:checked + .switch-slider{background:var(--primary)}
 .switch input:checked + .switch-slider:before{transform:translateX(23px)}
 .switch input:focus-visible + .switch-slider{outline:3px solid #5146e555;outline-offset:3px}
-.preposition-picker{display:block;margin-top:16px;border:1px solid var(--line);border-radius:15px;padding:16px;background:#fcfcff}
+.preposition-picker{display:block;margin-top:16px;border:1px solid var(--line);border-radius:15px;padding:16px;background:#fcfcff;scroll-margin-top:18px}
 .preposition-picker[hidden]{display:none}
 #letterPickerView[hidden],#prepositionOptionsView[hidden]{display:none}
 .picker-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:13px}
@@ -1269,6 +1269,15 @@ function openPrepositionPicker(preserveSelection=false){
   activeLetter="";
   renderLetterGrid();
   setModeDescription();
+
+  // Once Enter opens the picker, bring the letter choices into view automatically.
+  // requestAnimationFrame lets the browser apply the hidden=false layout first.
+  requestAnimationFrame(()=>{
+    const picker=$("prepositionPicker");
+    if(picker && !picker.hidden){
+      picker.scrollIntoView({behavior:"smooth",block:"start"});
+    }
+  });
 }
 
 function resetImportForm(){
