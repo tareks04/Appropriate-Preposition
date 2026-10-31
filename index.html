@@ -19,8 +19,9 @@
   --green:#087849;
   --red:#b42335;
   --shadow:0 12px 32px rgba(32,45,80,.08);
-  --radius:18px;
+  --radius:18px
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -28,7 +29,7 @@ body{
   font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
   background:var(--bg);
   color:var(--ink);
-  line-height:1.55;
+  line-height:1.55
 }
 button,input,textarea,select{font:inherit}
 button{cursor:pointer}
@@ -42,13 +43,15 @@ button:disabled{opacity:.5;cursor:not-allowed}
   align-items:center;
   justify-content:space-between;
   gap:18px;
-  flex-wrap:wrap;
+  flex-wrap:wrap
 }
 .brand{display:flex;align-items:center;gap:13px}
 .logo{
   width:48px;height:48px;border-radius:15px;
-  background:#ffffff20;border:1px solid #ffffff35;
-  display:grid;place-items:center;font-size:23px;font-weight:800;
+  background:#ffffff20;
+  border:1px solid #ffffff35;
+  display:grid;place-items:center;
+  font-size:23px;font-weight:800
 }
 .brand h1{margin:0;font-size:clamp(1.15rem,3vw,1.65rem)}
 .brand p{margin:2px 0 0;color:#d7dcff;font-size:.88rem}
@@ -57,100 +60,111 @@ button:disabled{opacity:.5;cursor:not-allowed}
 
 .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 55px}
 .notice{
-  padding:12px 15px;background:#eef2ff;border:1px solid #dce2ff;
-  color:#35316f;border-radius:13px;font-size:.92rem;margin-bottom:18px;
+  padding:12px 15px;
+  background:#eef2ff;
+  border:1px solid #dce2ff;
+  color:#35316f;
+  border-radius:13px;
+  font-size:.92rem;
+  margin-bottom:18px
 }
+
 .stats{
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:13px;margin-bottom:21px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:13px;
+  margin-bottom:21px
 }
 .stat{
-  background:var(--paper);border:1px solid var(--line);
-  border-radius:16px;padding:17px;box-shadow:0 3px 12px #1b2a4d05;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:17px;
+  box-shadow:0 3px 12px #1b2a4d05
 }
 .stat .eyebrow{color:var(--muted);font-size:.84rem}
 .stat strong{font-size:1.8rem;display:block;margin-top:4px}
 .stat .mini{font-size:.78rem;color:#8791a5}
 
 .tabs{
-  display:flex;gap:7px;overflow-x:auto;padding:5px;margin:0 0 18px;
-  background:#e9edf6;border-radius:14px;
+  display:flex;
+  gap:7px;
+  overflow-x:auto;
+  padding:5px;
+  margin:0 0 18px;
+  background:#e9edf6;
+  border-radius:14px
 }
 .tab{
-  white-space:nowrap;border:0;background:transparent;padding:11px 16px;
-  border-radius:10px;color:#59647b;font-weight:700;
+  white-space:nowrap;
+  border:0;
+  background:transparent;
+  padding:11px 16px;
+  border-radius:10px;
+  color:#59647b;
+  font-weight:700
 }
-.tab.active{background:#fff;color:var(--primary);box-shadow:0 3px 10px #202d5010}
+.tab.active{
+  background:#fff;
+  color:var(--primary);
+  box-shadow:0 3px 10px #202d5010
+}
 .panel{display:none}
 .panel.active{display:block}
 
 .layout{
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);
-  gap:18px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);
+  gap:18px
 }
 .card{
-  background:var(--paper);border:1px solid var(--line);
-  border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);min-width:0;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+  min-width:0
 }
 .card h2{font-size:1.18rem;margin:0 0 6px}
 .sub{color:var(--muted);font-size:.9rem;margin:0 0 18px}
 
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px
+}
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-width:0
+}
+.field.full{grid-column:1/-1}
 .field label{font-weight:700;font-size:.9rem}
 .field input,.field textarea,.field select,.searchbox{
-  border:1px solid #d7deeb;border-radius:11px;padding:11px 12px;
-  background:#fbfcff;color:var(--ink);outline:none;width:100%;
+  border:1px solid #d7deeb;
+  border-radius:11px;
+  padding:11px 12px;
+  background:#fbfcff;
+  color:var(--ink);
+  outline:none;
+  width:100%
 }
 .field input:focus,.field textarea:focus,.field select:focus,.searchbox:focus{
-  border-color:var(--primary);box-shadow:0 0 0 3px #5146e51a;
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px #5146e51a
 }
-.field textarea{
-  min-height:170px;
-  resize:vertical;
-  line-height:1.55;
-  white-space:pre;
-  overflow-x:auto;
-}
+.field textarea{min-height:150px;resize:vertical}
 .hint{font-size:.78rem;color:var(--muted)}
 
-/* Separate Preposition Textbox + separate Word Guide */
-.prep-guide-layout{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(105px,.52fr);
-  gap:12px;
-  align-items:start;
-}
-.prep-input-column,
-.guide-column{min-width:0}
-.guide-label{
-  display:block;
-  font-weight:700;
-  font-size:.9rem;
-  margin-bottom:6px;
-}
-.word-guide{
-  min-height:170px;
-  padding:11px 0;
-  border-left:1px dashed #c9cfe0;
-  padding-left:11px;
-  overflow:hidden;
-}
-.guide-line{
-  height:1.55em;
-  line-height:1.55;
-  font-size:.88rem;
-  font-weight:700;
-  color:var(--primary);
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-.guide-line.empty{visibility:hidden}
-
 .btn{
-  border:1px solid #dce1ed;background:white;color:#303b55;
-  padding:10px 14px;border-radius:11px;font-weight:700;transition:.15s;
+  border:1px solid #dce1ed;
+  background:white;
+  color:#303b55;
+  padding:10px 14px;
+  border-radius:11px;
+  font-weight:700;
+  transition:.15s
 }
 .btn:hover{transform:translateY(-1px);box-shadow:0 5px 15px #14244812}
 .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
@@ -160,81 +174,220 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .btn.small{padding:7px 10px;font-size:.84rem}
 .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
 .divider{height:1px;background:var(--line);margin:20px 0}
+
 .tip-box{
-  border:1px dashed #ccd3e4;border-radius:13px;padding:14px;
-  background:#fafbff;font-size:.88rem;color:#4f5d77;
+  border:1px dashed #ccd3e4;
+  border-radius:13px;
+  padding:14px;
+  background:#fafbff;
+  font-size:.88rem;
+  color:#4f5d77
 }
 .tip-box strong{color:var(--ink)}
+
+/* SINGLE-WORD PREPOSITION IMPORTER */
+.mode-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:15px;
+  margin-top:17px;padding:14px 15px;border:1px solid var(--line);
+  border-radius:13px;background:#f8f9ff
+}
+.mode-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mode-copy strong{font-size:.95rem}
+.mode-copy span{font-size:.82rem;color:var(--muted)}
+.switch{position:relative;display:inline-block;width:52px;height:29px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.switch-slider{position:absolute;inset:0;border-radius:999px;background:#c7cede;transition:.2s;cursor:pointer}
+.switch-slider:before{content:"";position:absolute;width:21px;height:21px;left:4px;top:4px;border-radius:50%;background:#fff;box-shadow:0 1px 4px #0002;transition:.2s}
+.switch input:checked + .switch-slider{background:var(--primary)}
+.switch input:checked + .switch-slider:before{transform:translateX(23px)}
+.switch input:focus-visible + .switch-slider{outline:3px solid #5146e555;outline-offset:3px}
+.preposition-picker{display:block;margin-top:16px;border:1px solid var(--line);border-radius:15px;padding:16px;background:#fcfcff}
+.preposition-picker[hidden]{display:none}
+#letterPickerView[hidden],#prepositionOptionsView[hidden]{display:none}
+.picker-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:13px}
+.picker-head strong{font-size:.98rem}
+.picker-head p{margin:3px 0 0;color:var(--muted);font-size:.83rem}
+.mode-tag{white-space:nowrap;border-radius:999px;padding:5px 9px;background:#eeedff;color:#453bd1;font-size:.7rem;font-weight:800;letter-spacing:.04em}
+.letter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:10px}
+.letter-tile{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:82px;padding:10px 7px;border:1px solid #dce2ef;border-radius:12px;background:#fff;color:var(--ink);cursor:pointer;transition:.15s}
+.letter-tile:hover{border-color:#8c85ff;background:#faf9ff;transform:translateY(-1px)}
+.letter-tile.has-selection{border-color:#8cdbb6;background:#eafaf3}
+.letter-char{font-size:1.45rem;font-weight:850;line-height:1.1;color:var(--primary)}
+.letter-count{font-size:.72rem;color:var(--muted)}
+.letter-picked{font-size:.69rem;font-weight:800;color:#087849}
+.letter-view-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:13px}
+.letter-view-head strong{font-size:.92rem}
+.preposition-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.prep-option{display:flex;align-items:center;gap:9px;min-height:43px;padding:9px 11px;border:1px solid #dce2ef;border-radius:10px;background:#fff;cursor:pointer;transition:.15s;min-width:0}
+.prep-option:hover:not(.is-disabled){border-color:#8c85ff;background:#faf9ff}
+.prep-option input{width:17px;height:17px;margin:0;accent-color:var(--primary);flex-shrink:0}
+.prep-option .prep-name{font-weight:650;overflow-wrap:anywhere}
+.prep-option .saved-label{margin-left:auto;color:#087849;font-size:.68rem;font-weight:750;white-space:nowrap}
+.prep-option.is-selected{border-color:#8cdbb6;background:#eafaf3}
+.prep-option.is-disabled{opacity:.55;cursor:not-allowed;background:#f3f5f9}
+.picker-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}
+#selectionCount{font-size:.85rem;color:var(--muted);font-weight:650}
+body.dark .mode-bar{background:#111a2a;border-color:var(--line)}
+body.dark .preposition-picker{background:#111a2a;border-color:var(--line)}
+body.dark .letter-tile{background:#172237;border-color:#39465e;color:var(--ink)}
+body.dark .letter-tile:hover{background:#202844;border-color:#7970ff}
+body.dark .letter-tile.has-selection{background:#15382e;border-color:#287a5b}
+body.dark .prep-option{background:#172237;border-color:#39465e;color:var(--ink)}
+body.dark .prep-option:hover:not(.is-disabled){background:#202844;border-color:#7970ff}
+body.dark .prep-option.is-selected{background:#15382e;border-color:#287a5b}
+body.dark .prep-option.is-disabled{background:#202b40}
+body.dark .mode-tag{background:#29254e;color:#d0cbff}
+@media(max-width:540px){
+  .preposition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .letter-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .letter-tile{min-height:76px}
+  .preposition-picker{padding:13px}
+  .picker-head{display:block}
+  .mode-tag{display:inline-block;margin-top:9px}
+}
+
 .file-drop{
-  border:1.5px dashed #c6cce0;background:#fafbff;
-  border-radius:14px;padding:18px;text-align:center;
+  border:1.5px dashed #c6cce0;
+  background:#fafbff;
+  border-radius:14px;
+  padding:18px;
+  text-align:center
 }
 .file-drop input{max-width:100%;margin-top:10px}
 .file-drop .big{font-size:1.8rem}
 .file-drop p{margin:5px 0;color:var(--muted);font-size:.88rem}
 
 .toolbar{
-  display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:14px
 }
 .toolbar .searchbox{flex:1;min-width:180px}
 .word-list{display:grid;gap:11px}
 .word-card{
-  border:1px solid var(--line);border-radius:14px;padding:15px;background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:15px;
+  background:#fff
 }
-.word-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.word-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px
+}
 .word-top h3{margin:0;font-size:1.08rem;overflow-wrap:anywhere}
-.word-actions{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.word-actions{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+  justify-content:flex-end
+}
 .word-card p{margin:8px 0 0;color:#4d5a73;font-size:.9rem;overflow-wrap:anywhere}
+
 .pill{
-  display:inline-block;font-size:.78rem;border-radius:999px;
-  padding:5px 10px;margin:4px 4px 0 0;background:#eef2ff;color:#4c45bb;
+  display:inline-block;
+  font-size:.78rem;
+  border-radius:999px;
+  padding:5px 10px;
+  margin:4px 4px 0 0;
+  background:#eef2ff;
+  color:#4c45bb
 }
 .pill.green{background:#e1f8ed;color:#087849}
 .pill.red{background:#ffeaed;color:#aa2538}
+
 .empty{
-  text-align:center;color:var(--muted);padding:35px 15px;
-  border:1px dashed #d4daea;border-radius:14px;
+  text-align:center;
+  color:var(--muted);
+  padding:35px 15px;
+  border:1px dashed #d4daea;
+  border-radius:14px
 }
 
 .quiz-config{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px
 }
 .quiz-stage{max-width:800px;margin:0 auto}
 .quiz-head{
-  display:flex;justify-content:space-between;align-items:center;gap:12px;
-  flex-wrap:wrap;color:var(--muted);font-size:.88rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  font-size:.88rem
 }
 .progress{
-  height:7px;background:#e9edf5;border-radius:999px;
-  margin:12px 0 22px;overflow:hidden;
+  height:7px;
+  background:#e9edf5;
+  border-radius:999px;
+  margin:12px 0 22px;
+  overflow:hidden
 }
 .progress span{
-  display:block;height:100%;width:0;
-  background:linear-gradient(90deg,#5146e5,#8881ff);transition:width .2s;
+  display:block;
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#5146e5,#8881ff);
+  transition:width .2s
 }
 .question-card{
-  border:1px solid var(--line);border-radius:20px;
+  border:1px solid var(--line);
+  border-radius:20px;
   padding:clamp(19px,4vw,30px);
-  background:linear-gradient(160deg,#fff,#fbfbff);
+  background:linear-gradient(160deg,#fff,#fbfbff)
 }
 .q-type{
-  display:inline-block;color:#4b43c6;background:#eeedff;border-radius:999px;
-  padding:5px 10px;font-size:.78rem;font-weight:800;margin-bottom:12px;
+  display:inline-block;
+  color:#4b43c6;
+  background:#eeedff;
+  border-radius:999px;
+  padding:5px 10px;
+  font-size:.78rem;
+  font-weight:800;
+  margin-bottom:12px
 }
 .question-card h2{
-  font-size:clamp(1.35rem,3.5vw,1.9rem);line-height:1.45;margin:0 0 6px;
+  font-size:clamp(1.35rem,3.5vw,1.9rem);
+  line-height:1.45;
+  margin:0 0 6px
 }
 .question-word{color:#453bd1}
-.question-card .q-hint{margin:0 0 20px;color:var(--muted);font-size:.9rem}
+.question-card .q-hint{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:.9rem
+}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .option{
-  display:flex;align-items:center;gap:11px;text-align:left;min-height:61px;
-  border:1px solid #dce2ef;border-radius:13px;padding:12px;background:white;
-  color:var(--ink);font-weight:650;overflow-wrap:anywhere;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  text-align:left;
+  min-height:61px;
+  border:1px solid #dce2ef;
+  border-radius:13px;
+  padding:12px;
+  background:white;
+  color:var(--ink);
+  font-weight:650;
+  overflow-wrap:anywhere
 }
 .option .letter{
-  flex-shrink:0;width:30px;height:30px;border-radius:9px;background:#f0f2f8;
-  color:#59647b;display:grid;place-items:center;font-size:.85rem;
+  flex-shrink:0;
+  width:30px;
+  height:30px;
+  border-radius:9px;
+  background:#f0f2f8;
+  color:#59647b;
+  display:grid;
+  place-items:center;
+  font-size:.85rem
 }
 .option:hover:not(:disabled){border-color:#8c85ff;background:#faf9ff}
 .option.correct{border-color:#56c596;background:#eafaf3;color:#086e43}
@@ -243,8 +396,11 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .option.wrong .letter{background:#c73548;color:white}
 
 .feedback{
-  display:none;padding:14px 15px;border-radius:12px;margin-top:15px;
-  scroll-margin-top:24px;
+  display:none;
+  padding:14px 15px;
+  border-radius:12px;
+  margin-top:15px;
+  scroll-margin-top:24px
 }
 .feedback.show{display:block}
 .feedback.good{background:#e7f9f0;border:1px solid #bcebd3;color:#096c43}
@@ -252,59 +408,111 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .feedback p{margin:5px 0 0}
 
 .reference-box{
-  margin-top:15px;padding:15px;border-radius:13px;
-  border:1px solid #d9ddfa;background:#f6f6ff;color:#34365d;
-  scroll-margin-top:25px;
+  margin-top:15px;
+  padding:15px;
+  border-radius:13px;
+  border:1px solid #d9ddfa;
+  background:#f6f6ff;
+  color:#34365d;
+  scroll-margin-top:25px
 }
 .reference-box h3{margin:0 0 5px;font-size:1rem}
 .reference-box p{margin:5px 0;font-size:.88rem}
 .reference-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
 .reference-item{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:6px 10px;border-radius:999px;
-  background:#e9ebf5;color:#424b67;font-size:.85rem;font-weight:650;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#e9ebf5;
+  color:#424b67;
+  font-size:.85rem;
+  font-weight:650
 }
 .reference-item.selected{
-  background:#d9f6e8;color:#087849;border:1px solid #8cdbb6;
+  background:#d9f6e8;
+  color:#087849;
+  border:1px solid #8cdbb6
 }
 .reference-note{font-size:.78rem!important;color:#666b85;margin-top:10px!important}
 
 .quiz-bottom{
-  display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap;margin-top:16px;
+  display:flex;
+  justify-content:space-between;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-top:16px
 }
+
 .result{text-align:center;padding:30px 15px}
 .score-circle{
-  width:136px;height:136px;border-radius:50%;border:9px solid #e6e4ff;
-  display:grid;place-items:center;margin:18px auto;color:#4338ca;background:#faf9ff;
+  width:136px;
+  height:136px;
+  border-radius:50%;
+  border:9px solid #e6e4ff;
+  display:grid;
+  place-items:center;
+  margin:18px auto;
+  color:#4338ca;
+  background:#faf9ff
 }
 .score-circle strong{font-size:2rem}
 .result-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
-  max-width:530px;margin:22px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  max-width:530px;
+  margin:22px auto
 }
 .result-cell{
-  background:#f8f9fd;border:1px solid var(--line);
-  padding:14px;border-radius:13px;
+  background:#f8f9fd;
+  border:1px solid var(--line);
+  padding:14px;
+  border-radius:13px
 }
 .result-cell strong{font-size:1.35rem;display:block}
 .result-cell small{color:var(--muted)}
 
 .footer{text-align:center;margin-top:27px;color:#8791a5;font-size:.8rem}
 .toast{
-  position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);
-  background:#172033;color:#fff;padding:11px 16px;border-radius:12px;
-  box-shadow:var(--shadow);z-index:99;opacity:0;pointer-events:none;
-  transition:.2s;max-width:calc(100% - 30px);text-align:center;
+  position:fixed;
+  left:50%;
+  bottom:20px;
+  transform:translate(-50%,20px);
+  background:#172033;
+  color:#fff;
+  padding:11px 16px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  z-index:99;
+  opacity:0;
+  pointer-events:none;
+  transition:.2s;
+  max-width:calc(100% - 30px);
+  text-align:center
 }
 .toast.show{opacity:1;transform:translate(-50%,0)}
+
 .modal-bg{
-  position:fixed;inset:0;background:#0e17388c;display:none;
-  align-items:center;justify-content:center;padding:18px;z-index:90;
+  position:fixed;
+  inset:0;
+  background:#0e17388c;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:90
 }
 .modal-bg.show{display:flex}
 .modal{
-  width:min(560px,100%);max-height:85vh;overflow:auto;
-  background:white;border-radius:18px;padding:22px;box-shadow:0 25px 60px #0003;
+  width:min(560px,100%);
+  max-height:85vh;
+  overflow:auto;
+  background:white;
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 25px 60px #0003
 }
 .modal h2{margin-top:0}
 
@@ -318,6 +526,7 @@ button:disabled{opacity:.5;cursor:not-allowed}
   .wrap{padding:15px 12px 38px}
   .card{padding:17px}
   .form-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
   .stats{gap:9px}
   .stat{padding:13px}
   .stat strong{font-size:1.5rem}
@@ -328,15 +537,19 @@ button:disabled{opacity:.5;cursor:not-allowed}
   .word-actions{justify-content:flex-start;margin-top:10px}
   .result-grid{gap:6px}
   .result-cell{padding:10px 5px}
-  .prep-guide-layout{grid-template-columns:minmax(0,1fr) minmax(100px,.48fr);gap:8px}
-  .word-guide{padding-left:7px}
 }
 
 /* DARK THEME */
 body.dark{
-  --bg:#0b1220;--paper:#151e30;--ink:#edf2ff;--muted:#a8b4ca;
-  --line:#303c53;--primary:#8077ff;--primary2:#655ce8;
-  --shadow:0 12px 32px rgba(0,0,0,.22);color-scheme:dark;
+  --bg:#0b1220;
+  --paper:#151e30;
+  --ink:#edf2ff;
+  --muted:#a8b4ca;
+  --line:#303c53;
+  --primary:#8077ff;
+  --primary2:#655ce8;
+  --shadow:0 12px 32px rgba(0,0,0,.22);
+  color-scheme:dark
 }
 body.dark .notice{background:#192542;border-color:#303f67;color:#dce5ff}
 body.dark .tabs{background:#182236}
@@ -345,7 +558,7 @@ body.dark .tab.active{background:#29334c;color:#c4bdff}
 body.dark .field input,body.dark .field textarea,body.dark .field select,
 body.dark .searchbox{background:#10192a;color:var(--ink);border-color:#39465e}
 body.dark .btn:not(.primary):not(.soft):not(.danger){
-  background:#202b40;color:#e6ecfa;border-color:#3b4963;
+  background:#202b40;color:#e6ecfa;border-color:#3b4963
 }
 body.dark .top-actions .btn{background:#ffffff12;color:#fff;border-color:#ffffff55}
 body.dark .btn.soft{background:#29254e;color:#d0cbff;border-color:#454077}
@@ -355,11 +568,10 @@ body.dark .file-drop{background:#111a2a;border-color:#39465e}
 body.dark .word-card{background:var(--paper);border-color:var(--line)}
 body.dark .word-card p{color:#bdc8db}
 body.dark .empty{border-color:var(--line)}
-body.dark .word-guide{border-left-color:#48536e}
-body.dark .guide-line{color:#b7b0ff}
 body.dark .progress{background:#273248}
 body.dark .question-card{
-  background:linear-gradient(160deg,#182236,#111a2a);border-color:var(--line);
+  background:linear-gradient(160deg,#182236,#111a2a);
+  border-color:var(--line)
 }
 body.dark .q-type{background:#29254e;color:#c9c3ff}
 body.dark .question-word{color:#b7b0ff}
@@ -393,10 +605,12 @@ body.dark ::selection{background:#5146e5;color:white}
       <p>Main Word · Preposition · MCQ Practice</p>
     </div>
   </div>
+
   <div class="top-actions">
     <button class="btn" id="themeToggleBtn" type="button">🌙 Dark Mode</button>
     <button class="btn" id="exportJsonTop" type="button">Backup Export ↗</button>
     <button class="btn" id="helpBtn" type="button">Help</button>
+    <button class="btn small" id="npBtn" type="button" title="Add a new preposition">NP</button>
   </div>
 </header>
 
@@ -413,16 +627,19 @@ body.dark ::selection{background:#5146e5;color:white}
       <strong id="statWords">0</strong>
       <span class="mini">Unique keywords</span>
     </div>
+
     <div class="stat">
       <span class="eyebrow">Word–Preposition Pairs</span>
       <strong id="statPairs">0</strong>
       <span class="mini">Saved relationships</span>
     </div>
+
     <div class="stat">
       <span class="eyebrow">Unique Prepositions</span>
       <strong id="statPreps">0</strong>
       <span class="mini">Available options</span>
     </div>
+
     <div class="stat">
       <span class="eyebrow">Eligible MCQs</span>
       <strong id="statReady">0</strong>
@@ -442,55 +659,62 @@ body.dark ::selection{background:#5146e5;color:white}
 
       <div class="card">
         <h2 id="formTitle">Import Main Words and Prepositions</h2>
+
         <p class="sub">
-          Write Main Words and their corresponding Prepositions in separate boxes.
-          Keep both boxes in the same order.
+          Enter one Main Word, then choose its preposition or prepositions from the master list.
         </p>
 
-        <form id="pairForm">
-          <div class="form-grid">
-
-            <!-- MAIN WORD BOX -->
-            <div class="field">
-              <label for="mainWordsInput">Main Word / Keyword</label>
-              <textarea id="mainWordsInput" required
-                placeholder="Interested&#10;Depend&#10;Good&#10;Afraid&#10;Proud"></textarea>
-              <span class="hint">Write one Main Word per line.</span>
-            </div>
-
-            <!-- PREPOSITION BOX + SEPARATE WORD GUIDE -->
-            <div class="field">
-              <div class="prep-guide-layout">
-
-                <div class="prep-input-column">
-                  <label for="prepositionsInput">Corresponding Preposition</label>
-                  <textarea id="prepositionsInput" required
-                    placeholder="in&#10;on&#10;at&#10;of&#10;of"></textarea>
-                  <span class="hint">Write one Preposition per line.</span>
-                </div>
-
-                <div class="guide-column">
-                  <span class="guide-label">Word Guide</span>
-                  <div id="wordGuide" class="word-guide" aria-live="polite"></div>
-                </div>
-
-              </div>
-            </div>
-
+        <form id="pairForm" autocomplete="off">
+          <div class="field full">
+            <label for="mainWordInput">Main Word</label>
+            <input id="mainWordInput" type="text" required
+              placeholder="Type a Main Word, e.g. Accustomed"
+              autocomplete="off" spellcheck="false">
+            <span class="hint">Write one Main Word and press Enter to open the Preposition List.</span>
           </div>
 
-          <div class="tip-box" style="margin-top:14px">
-            <strong>How to use:</strong>
-            Write your Main Words in the first box. Their names will
-            automatically appear in the separate Word Guide beside the
-            Preposition box. Enter each corresponding Preposition on the
-            matching line. The word disappears from the Guide as soon as
-            you start typing its Preposition.
+          <div class="mode-bar">
+            <div class="mode-copy">
+              <strong>2+ Preposition</strong>
+              <span id="modeDescription">OFF — choose one preposition to save it immediately.</span>
+              <span class="hint">After one Main Word is saved, 2+ mode automatically switches OFF for the next word.</span>
+            </div>
+            <label class="switch" aria-label="Enable multiple prepositions">
+              <input type="checkbox" id="multiPrepToggle">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <div class="preposition-picker" id="prepositionPicker" hidden>
+            <div class="picker-head">
+              <div>
+                <strong>Preposition নির্বাচন করুন</strong>
+                <p id="pickerInstruction">প্রথমে Preposition-এর শুরুর অক্ষর নির্বাচন করুন।</p>
+              </div>
+              <span class="mode-tag" id="pickerModeTag">SINGLE MODE</span>
+            </div>
+
+            <div id="letterPickerView">
+              <p class="hint" style="margin:0 0 11px">শুরুর অক্ষর অনুযায়ী Preposition দেখতে একটি Letter Box নির্বাচন করুন।</p>
+              <div class="letter-grid" id="letterGrid"></div>
+            </div>
+
+            <div id="prepositionOptionsView" hidden>
+              <div class="letter-view-head">
+                <button class="btn small" id="backToLettersBtn" type="button">← Back to Letters</button>
+                <strong id="activeLetterHeading">Prepositions starting with A</strong>
+              </div>
+              <div class="preposition-grid" id="prepositionList"></div>
+            </div>
+
+            <div class="picker-footer">
+              <span id="selectionCount" aria-live="polite">Choose a letter to begin.</span>
+              <button class="btn primary" id="saveSelectedBtn" type="button" disabled hidden>Save Selected</button>
+            </div>
           </div>
 
           <div class="actions">
-            <button class="btn primary" type="submit" id="savePairBtn">＋ Save Pair(s)</button>
-            <button class="btn" type="button" id="clearFormBtn">Clear Fields</button>
+            <button class="btn" type="button" id="clearFormBtn">Clear / Cancel</button>
             <button class="btn soft" type="button" id="sampleBtn">Load Example</button>
           </div>
         </form>
@@ -498,12 +722,11 @@ body.dark ::selection{background:#5146e5;color:white}
         <div class="divider"></div>
 
         <div class="tip-box">
-          <strong>Multiple prepositions for one word:</strong><br>
-          Interested → in<br>
-          Interested → about<br>
-          Interested → of<br><br>
-          To save multiple prepositions for the same Main Word, repeat
-          that Main Word on additional lines in the Main Word box.
+          <strong>How saving works:</strong><br>
+          <b>Browse by letter:</b> Press Enter to see the nine starting-letter boxes (A, B, D, F, I, N, O, T, U). Open a letter to see its prepositions.<br><br>
+          <b>2+ Preposition OFF:</b> Open a letter, then click one preposition. It is saved immediately.<br><br>
+          <b>2+ Preposition ON:</b> Select prepositions from one letter, use <b>Back to Letters</b> to open another letter, and keep selecting. Your selections remain checked. Save when at least two are selected.<br><br>
+          Each Word–Preposition relationship is stored as a separate pair. In MCQ practice, only one is treated as the correct answer for each question; the other prepositions for that same Main Word are shown in the reference section, not as distractors.
         </div>
       </div>
 
@@ -547,10 +770,12 @@ Proud | of</textarea>
   <!-- VOCABULARY -->
   <section class="panel" id="panel-words">
     <div class="card">
+
       <div class="toolbar">
         <input class="searchbox" id="searchWords"
           placeholder="Search Main Word or Preposition...">
         <button class="btn" id="showAllBtn" type="button">Show All</button>
+        <button class="btn danger" id="deleteAllWordsBtn" type="button">Delete All</button>
       </div>
 
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -569,12 +794,14 @@ Proud | of</textarea>
 
     <div class="card" id="quizSetup">
       <h2>Preposition MCQ Test</h2>
+
       <p class="sub">
-        The Main Word is the question. Choose the correct Preposition.
+        The Main Word is the question. Choose the correct preposition.
         Each question has exactly four unique options.
       </p>
 
       <div class="quiz-config">
+
         <div class="field">
           <label for="quizCount">Number of Questions</label>
           <select id="quizCount">
@@ -599,6 +826,7 @@ Proud | of</textarea>
             <option value="immediate">Show answer immediately</option>
           </select>
         </div>
+
       </div>
 
       <div class="tip-box" id="quizReadiness" style="margin-top:17px">
@@ -617,14 +845,22 @@ Proud | of</textarea>
         <span>Correct: <b id="liveScore">0</b></span>
       </div>
 
-      <div class="progress"><span id="progressBar"></span></div>
+      <div class="progress">
+        <span id="progressBar"></span>
+      </div>
 
       <div class="question-card">
+
         <span class="q-type">PREPOSITION / Appropriate Preposition</span>
+
         <h2 id="questionTitle">Interested</h2>
-        <p class="q-hint" id="questionHint">Choose the correct Preposition.</p>
+
+        <p class="q-hint" id="questionHint">
+          Choose the correct preposition.
+        </p>
 
         <div class="options" id="optionsBox"></div>
+
         <div class="feedback" id="answerFeedback" aria-live="polite"></div>
       </div>
 
@@ -633,6 +869,7 @@ Proud | of</textarea>
         <button class="btn" id="skipQuestionBtn" type="button">Skip ↷</button>
         <button class="btn primary" id="nextQuestionBtn" type="button" disabled>Next →</button>
       </div>
+
     </div>
 
     <div id="quizResult" style="display:none"></div>
@@ -641,27 +878,52 @@ Proud | of</textarea>
   <div class="footer">
     WordPrep · Personal Preposition Practice Tool · Data stays in your browser
   </div>
+
 </main>
 
 <div class="toast" id="toast" role="status"></div>
 
 <div class="modal-bg" id="helpModal">
   <div class="modal">
+
     <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
       <h2>How to Use WordPrep</h2>
       <button class="btn small" id="closeHelpBtn" type="button">✕ Close</button>
     </div>
 
-    <p><b>1. Add pairs:</b> Write Main Words in the first box and their corresponding Prepositions in the second box. Keep the same line order.</p>
-    <p><b>2. Word Guide:</b> The guide beside the Preposition box automatically displays Main Words that still need a Preposition.</p>
-    <p><b>3. Live update:</b> The Guide updates with every typed character. A word disappears when its corresponding Preposition line is no longer empty. Clearing that Preposition makes the word appear again.</p>
-    <p><b>4. Multiple prepositions:</b> Repeat the same Main Word on additional lines to add more Prepositions.</p>
-    <p><b>5. MCQ rule:</b> All other Prepositions belonging to the same Main Word are excluded from its distractors.</p>
-    <p><b>6. Four options:</b> A question is created only when three other unique and valid distractors are available.</p>
-    <p><b>7. Explanation:</b> After answering, the page automatically scrolls to a reference box showing the Main Word and all its imported Prepositions.</p>
-    <p><b>8. Capitalization:</b> The first letter of the Main Word is capitalized in the MCQ and reference box.</p>
-    <p><b>9. Backup:</b> Export JSON to save your pairs and learning progress.</p>
-    <p><b>Note:</b> WordPrep uses your imported pairs as its answer key. It does not independently verify grammatical correctness.</p>
+    <p><b>1. Add a Main Word:</b> Enter one Main Word and press Enter to display the starting-letter boxes.</p>
+
+    <p><b>2. Browse by letter:</b> The final list is organized into nine letter boxes: A, B, D, F, I, N, O, T and U. Select a letter to display its prepositions.</p>
+
+    <p><b>3. 2+ Preposition OFF:</b> Open a letter and click one preposition. That single Word–Preposition pair is saved immediately.</p>
+
+    <p><b>4. 2+ Preposition ON:</b> Select at least two prepositions. Use Back to Letters to choose prepositions from another letter; previous selections remain checked. Save Selected becomes active after two or more selections.</p>
+
+    <p><b>5. Existing pairs:</b> A preposition already saved for the same Main Word is marked Saved and cannot be added again.</p>
+
+    <p><b>6. MCQ rule:</b> Each saved pair can create its own question. Every other preposition belonging to that same Main Word is excluded from the distractors.</p>
+
+    <p><b>7. Explanation:</b> After answering, a reference box displays the Main Word and all imported prepositions associated with it. The page automatically scrolls to this box.</p>
+
+    <p><b>8. Four options and learning:</b> A question is created only when three other unique, valid distractors are available. Random practice retains the New:Corrected:Mistaken = 4:1:5 learning ratio.</p>
+
+    <p><b>9. Backup:</b> Export JSON to save your pairs and learning progress. The final 40-item Preposition Master List is grouped into nine starting-letter boxes.</p>
+
+    <p><b>Note:</b> WordPrep uses the pairs you import as your answer key. It does not independently verify whether each English word–preposition combination is grammatically correct.</p>
+
+  </div>
+</div>
+
+<div class="modal-bg" id="npModal">
+  <div class="modal" style="width:min(390px,100%);padding:17px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+      <div><h2 style="margin:0;font-size:1.05rem">NP · New Preposition</h2><p class="hint" style="margin:3px 0 0">Add a custom item to the letter list.</p></div>
+      <button class="btn small" id="closeNpBtn" type="button">✕</button>
+    </div>
+    <form id="npForm" style="margin-top:13px">
+      <div class="field"><label for="newPrepInput">New Preposition</label><input id="newPrepInput" maxlength="60" placeholder="e.g. as per" required></div>
+      <div class="actions" style="margin-top:11px"><button class="btn primary small" type="submit">＋ Add NP</button></div>
+    </form>
   </div>
 </div>
 
@@ -678,6 +940,7 @@ const $ = id => document.getElementById(id);
 const PAIR_STORAGE_KEY = "wordprep_pairs_v1";
 const LEARNING_STORAGE_KEY = "wordprep_learning_v1";
 const THEME_STORAGE_KEY = "wordprep_theme_v1";
+const MULTI_MODE_STORAGE_KEY = "wordprep_multi_prep_mode_v1";
 
 function safeLoad(key,fallback){
   try{
@@ -703,16 +966,21 @@ function saveLearning(){
 }
 
 function norm(value){
-  return String(value??"").trim().toLowerCase().replace(/\s+/g," ");
+  return String(value ?? "").trim().toLowerCase().replace(/\s+/g," ");
 }
 
+/* Capitalize ONLY the first letter of the displayed text.
+   The saved word and answer matching are not changed. */
 function capitalizeFirst(value){
-  const text=String(value??"").trim();
-  return text ? text.charAt(0).toUpperCase()+text.slice(1) : "";
+  const text=String(value ?? "").trim();
+
+  if(!text) return "";
+
+  return text.charAt(0).toUpperCase()+text.slice(1);
 }
 
 function esc(value){
-  return String(value??"").replace(/[&<>"']/g,ch=>({
+  return String(value ?? "").replace(/[&<>"']/g,ch=>({
     "&":"&amp;",
     "<":"&lt;",
     ">":"&gt;",
@@ -726,15 +994,20 @@ function makeId(){
 }
 
 function qid(pair){
-  return JSON.stringify([norm(pair.word),norm(pair.preposition)]);
+  return JSON.stringify([
+    norm(pair.word),
+    norm(pair.preposition)
+  ]);
 }
 
 function shuffle(array){
   const out=[...array];
+
   for(let i=out.length-1;i>0;i--){
     const j=Math.floor(Math.random()*(i+1));
     [out[i],out[j]]=[out[j],out[i]];
   }
+
   return out;
 }
 
@@ -742,97 +1015,61 @@ function toast(message){
   const el=$("toast");
   el.textContent=message;
   el.classList.add("show");
+
   clearTimeout(toast.timer);
-  toast.timer=setTimeout(()=>el.classList.remove("show"),2800);
+
+  toast.timer=setTimeout(()=>{
+    el.classList.remove("show");
+  },2800);
 }
 
 function downloadFile(filename,content,type){
   const blob=new Blob([content],{type});
   const url=URL.createObjectURL(blob);
   const a=document.createElement("a");
+
   a.href=url;
   a.download=filename;
+
   document.body.appendChild(a);
   a.click();
   a.remove();
+
   setTimeout(()=>URL.revokeObjectURL(url),1200);
 }
-
-/* -------------------------------------------------------
-   LIVE WORD GUIDE
-
-   - Main Word input is read on every input event.
-   - Preposition input is also read on every input event.
-   - If a corresponding Preposition line contains any
-     non-whitespace character, only that Guide row hides.
-   - Other rows stay in their original positions.
-   - Deleting a Preposition makes its Main Word appear again.
-------------------------------------------------------- */
-
-function liveLines(value){
-  const text=String(value??"").replace(/\r/g,"");
-  return text==="" ? [] : text.split("\n");
-}
-
-function updateWordGuide(){
-  const words=liveLines($("mainWordsInput").value);
-  const preps=liveLines($("prepositionsInput").value);
-
-  const root=$("wordGuide");
-
-  root.innerHTML=words.map((rawWord,index)=>{
-    const word=String(rawWord??"").trim();
-    const prep=String(preps[index]??"").trim();
-
-    // Keep row height even when a word is hidden,
-    // so the remaining words stay aligned to their rows.
-    const showWord=Boolean(word) && !prep;
-
-    return `
-      <div class="guide-line ${showWord?"":"empty"}"
-           title="${showWord?esc(word):""}">
-        ${showWord?esc(capitalizeFirst(word)):""}
-      </div>
-    `;
-  }).join("");
-}
-
-// Every character typed or pasted triggers an update.
-$("mainWordsInput").addEventListener("input",updateWordGuide);
-$("prepositionsInput").addEventListener("input",updateWordGuide);
 
 /* -------------------------------------------------------
    PAIR DATA MANAGEMENT
 ------------------------------------------------------- */
 
 let editPairId=null;
+let activeWord="";
+let activeLetter="";
+let selectedPrepositions=new Set();
 
-function splitColumn(text){
-  const lines=String(text??"").replace(/\r/g,"").split("\n");
+/*
+  Final Preposition Master List supplied by the user.
+  “toward” and “towards” are separate selectable entries.
+*/
+const CUSTOM_PREP_STORAGE_KEY="wordprep_custom_prepositions_v1";
+let customPrepositions=safeLoad(CUSTOM_PREP_STORAGE_KEY,[]);
+if(!Array.isArray(customPrepositions)) customPrepositions=[];
+function saveCustomPrepositions(){localStorage.setItem(CUSTOM_PREP_STORAGE_KEY,JSON.stringify(customPrepositions));}
 
-  while(lines.length && !lines[lines.length-1].trim()){
-    lines.pop();
-  }
+const PREPOSITION_MASTER_LIST=[
+  "above","across","after","against","along","among","around","at","away from",
+  "before","behind","below","beneath","beside","between","by",
+  "down","during",
+  "for","from",
+  "in","in front of","inside","into",
+  "near","next to",
+  "off","on","onto","out of","outside","over",
+  "through","till","to","toward / towards",
+  "under","underneath","until","up"
+];
 
-  return lines.map(line=>line.trim());
-}
-
-function validateColumns(words,preps){
-  if(!words.length || !preps.length){
-    return "Please enter both Main Words and Prepositions.";
-  }
-
-  if(words.length!==preps.length){
-    return `The number of Main Words (${words.length}) and Prepositions (${preps.length}) does not match.`;
-  }
-
-  for(let i=0;i<words.length;i++){
-    if(!words[i] || !preps[i]){
-      return `There is an empty entry on row ${i+1}. Please complete both columns.`;
-    }
-  }
-
-  return "";
+function firstLetter(value){
+  return String(value??"").trim().charAt(0).toUpperCase();
 }
 
 function pairExists(word,preposition,ignoreId=null){
@@ -843,128 +1080,410 @@ function pairExists(word,preposition,ignoreId=null){
   );
 }
 
-function clearForm(){
-  editPairId=null;
-
-  $("mainWordsInput").value="";
-  $("prepositionsInput").value="";
-
-  $("formTitle").textContent="Import Main Words and Prepositions";
-  $("savePairBtn").textContent="＋ Save Pair(s)";
-
-  updateWordGuide();
+function currentModeIsMultiple(){
+  return $("multiPrepToggle").checked;
 }
 
-function addPairsFromColumns(words,preps){
-  const error=validateColumns(words,preps);
+function isPrepositionSelected(preposition){
+  return [...selectedPrepositions].some(item=>norm(item)===norm(preposition));
+}
 
-  if(error){
-    toast(error);
+function removeSelectedPreposition(preposition){
+  for(const item of selectedPrepositions){
+    if(norm(item)===norm(preposition)) selectedPrepositions.delete(item);
+  }
+}
+
+function setModeDescription(){
+  const multiple=currentModeIsMultiple();
+  const pickerOpen=!$("prepositionPicker").hidden;
+  const showingOptions=pickerOpen && !$("prepositionOptionsView").hidden;
+
+  $("modeDescription").textContent=multiple
+    ? "ON — select at least two prepositions, including across different letters."
+    : "OFF — choose one preposition to save it immediately.";
+
+  if(pickerOpen){
+    $("pickerModeTag").textContent=multiple?"MULTI-SELECT MODE":"SINGLE MODE";
+    if(showingOptions){
+      $("pickerInstruction").textContent=multiple
+        ? "একাধিক Preposition নির্বাচন করুন। অন্য অক্ষর থেকে নিতে Back to Letters চাপুন; আগের নির্বাচন থাকবে।"
+        : "এই অক্ষর থেকে একটি Preposition বাছুন; সেটি সঙ্গে সঙ্গে Save হবে।";
+    }else{
+      $("pickerInstruction").textContent=multiple
+        ? "একটি অক্ষর বেছে Preposition নির্বাচন করুন। অন্য অক্ষরে গিয়েও আগের নির্বাচন থাকবে।"
+        : "প্রথমে শুরুর অক্ষর, তারপর একটি Preposition বাছুন; সঙ্গে সঙ্গে Save হবে।";
+    }
+  }
+}
+
+function getPrepositionOptions(word){
+  const map=new Map();
+
+  [...PREPOSITION_MASTER_LIST,...customPrepositions].forEach(prep=>{
+    const key=norm(prep);
+    if(key && !map.has(key)) map.set(key,prep);
+  });
+
+  // Keep older/imported prepositions visible only while editing an existing pair.
+  // Normal Add mode therefore shows exactly the nine letters in the supplied master list.
+  if(editPairId){
+    pairs.forEach(pair=>{
+      if(norm(pair.word)===norm(word)){
+      const prep=String(pair.preposition||"").trim();
+      const key=norm(prep);
+        if(key && !map.has(key)) map.set(key,prep);
+      }
+    });
+  }
+
+  selectedPrepositions.forEach(prep=>{
+    const key=norm(prep);
+    if(key && !map.has(key)) map.set(key,prep);
+  });
+
+  return [...map.values()];
+}
+
+function getAvailableLetters(word){
+  return [...new Set(getPrepositionOptions(word).map(firstLetter).filter(Boolean))]
+    .sort((a,b)=>a.localeCompare(b));
+}
+
+function renderLetterGrid(){
+  const word=$("mainWordInput").value.trim();
+  if(!word) return;
+
+  const root=$("letterGrid");
+  const options=getPrepositionOptions(word);
+  const letters=getAvailableLetters(word);
+
+  root.innerHTML=letters.map(letter=>{
+    const letterOptions=options.filter(prep=>firstLetter(prep)===letter);
+    const selectedCount=letterOptions.filter(prep=>isPrepositionSelected(prep)).length;
+    const countLabel=`${letterOptions.length} ${letterOptions.length===1?"preposition":"prepositions"}`;
+
+    return `
+      <button class="letter-tile ${selectedCount?"has-selection":""}" type="button" data-letter="${esc(letter)}">
+        <span class="letter-char">${esc(letter)}</span>
+        <span class="letter-count">${countLabel}</span>
+        ${selectedCount?`<span class="letter-picked">${selectedCount} selected</span>`:""}
+      </button>
+    `;
+  }).join("");
+
+  updateSelectionSummary();
+}
+
+function showLetterOptions(letter){
+  const word=$("mainWordInput").value.trim();
+  if(!word) return;
+
+  activeLetter=String(letter||"").toUpperCase();
+  $("letterPickerView").hidden=true;
+  $("prepositionOptionsView").hidden=false;
+  $("activeLetterHeading").textContent=`Prepositions starting with ${activeLetter}`;
+  renderPrepositionList();
+  setModeDescription();
+}
+
+function showLetterGrid(){
+  activeLetter="";
+  $("prepositionOptionsView").hidden=true;
+  $("letterPickerView").hidden=false;
+  renderLetterGrid();
+  setModeDescription();
+}
+
+function updateSelectionSummary(){
+  const count=selectedPrepositions.size;
+  const multiple=currentModeIsMultiple();
+  const button=$("saveSelectedBtn");
+
+  if(editPairId){
+    $("selectionCount").textContent=count===1?"1 preposition selected for update":`${count} selected — choose exactly one`;
+    button.hidden=false;
+    button.textContent="✓ Update Pair";
+    button.disabled=count!==1;
     return;
   }
 
+  if(multiple){
+    $("selectionCount").textContent=`${count} selected across all letters`;
+    button.hidden=false;
+    button.textContent="Save Selected";
+    button.disabled=count<2;
+  }else{
+    $("selectionCount").textContent="Choose a letter, then click one preposition to save.";
+    button.hidden=true;
+    button.disabled=true;
+  }
+}
+
+function renderPrepositionList(){
+  const word=$("mainWordInput").value.trim();
+  if(!word || !activeLetter) return;
+
+  const root=$("prepositionList");
+  const options=getPrepositionOptions(word).filter(prep=>firstLetter(prep)===activeLetter);
+
+  if(!options.length){
+    root.innerHTML='<div class="empty">No prepositions found for this letter.</div>';
+    updateSelectionSummary();
+    return;
+  }
+
+  root.innerHTML=options.map(prep=>{
+    const isSelected=isPrepositionSelected(prep);
+    const isSaved=pairExists(word,prep,editPairId);
+
+    return `
+      <label class="prep-option ${isSelected?"is-selected":""} ${isSaved?"is-disabled":""}">
+        <input type="checkbox" data-preposition="${esc(prep)}"
+          ${isSelected?"checked":""} ${isSaved?"disabled":""}>
+        <span class="prep-name">${esc(prep)}</span>
+        ${isSaved?'<span class="saved-label">Saved</span>':""}
+      </label>
+    `;
+  }).join("");
+
+  updateSelectionSummary();
+  setModeDescription();
+}
+
+function openPrepositionPicker(preserveSelection=false){
+  const word=$("mainWordInput").value.trim();
+  if(!word){
+    toast("Please enter a Main Word first.");
+    $("mainWordInput").focus();
+    return;
+  }
+
+  activeWord=word;
+  if(!preserveSelection) selectedPrepositions.clear();
+
+  $("prepositionPicker").hidden=false;
+  $("prepositionList").innerHTML="";
+  $("prepositionOptionsView").hidden=true;
+  $("letterPickerView").hidden=false;
+  activeLetter="";
+  renderLetterGrid();
+  setModeDescription();
+}
+
+function resetImportForm(){
+  // Preserve the current mode for Clear/Cancel; successful 2+ saves set it OFF before reset.
+  const keepMultiMode=currentModeIsMultiple();
+  editPairId=null;
+  activeWord="";
+  activeLetter="";
+  selectedPrepositions.clear();
+
+  $("mainWordInput").value="";
+  $("prepositionPicker").hidden=true;
+  $("letterPickerView").hidden=false;
+  $("prepositionOptionsView").hidden=true;
+  $("letterGrid").innerHTML="";
+  $("prepositionList").innerHTML="";
+  $("formTitle").textContent="Import Main Words and Prepositions";
+  $("multiPrepToggle").checked=keepMultiMode;
+  $("multiPrepToggle").disabled=false;
+  $("saveSelectedBtn").hidden=true;
+  $("saveSelectedBtn").disabled=true;
+  $("saveSelectedBtn").textContent="Save Selected";
+  setModeDescription();
+  $("mainWordInput").focus();
+}
+
+function saveOnePair(word,preposition){
+  if(pairExists(word,preposition)){
+    toast(`"${word} → ${preposition}" is already saved.`);
+    return false;
+  }
+
+  pairs.push({
+    id:makeId(),
+    word:word,
+    preposition:preposition,
+    createdAt:new Date().toISOString()
+  });
+
+  savePairs();
+  renderAll();
+  toast(`Saved: ${word} → ${preposition}`);
+  resetImportForm();
+  return true;
+}
+
+function saveSelectedPairs(){
   if(editPairId){
-    if(words.length!==1){
-      toast("When editing, please enter exactly one pair.");
-      return;
-    }
+    updateEditedPair();
+    return;
+  }
 
-    const existing=pairs.find(p=>p.id===editPairId);
+  const word=$("mainWordInput").value.trim();
+  const chosen=[...selectedPrepositions];
 
-    if(!existing){
-      toast("The pair could not be found.");
-      clearForm();
-      return;
-    }
-
-    if(pairExists(words[0],preps[0],editPairId)){
-      toast("This exact Main Word + Preposition pair already exists.");
-      return;
-    }
-
-    existing.word=words[0];
-    existing.preposition=preps[0];
-
-    savePairs();
-    clearForm();
-    renderAll();
-
-    toast("Pair updated successfully.");
+  if(!word){
+    toast("Please enter a Main Word.");
+    return;
+  }
+  if(chosen.length<2){
+    toast("Select at least two prepositions before saving.");
     return;
   }
 
   let added=0;
   let duplicates=0;
 
-  for(let i=0;i<words.length;i++){
-    if(pairExists(words[i],preps[i])){
+  chosen.forEach(prep=>{
+    if(pairExists(word,prep)){
       duplicates++;
-      continue;
+      return;
     }
-
     pairs.push({
       id:makeId(),
-      word:words[i],
-      preposition:preps[i],
+      word:word,
+      preposition:prep,
       createdAt:new Date().toISOString()
     });
-
     added++;
-  }
+  });
 
-  savePairs();
-  clearForm();
-  renderAll();
+  if(added){
+    savePairs();
+    renderAll();
 
-  if(added && duplicates){
-    toast(`${added} pair(s) added. ${duplicates} exact duplicate(s) skipped.`);
-  }else if(added){
-    toast(`${added} pair(s) saved successfully.`);
+    // IMPORTANT: 2+ mode is for one Main Word only.
+    // Immediately switch it OFF after this word is submitted and persist OFF.
+    $("multiPrepToggle").checked=false;
+    localStorage.setItem(MULTI_MODE_STORAGE_KEY,"false");
+
+    resetImportForm();
+    toast(`${added} Word–Preposition pair(s) saved${duplicates?`; ${duplicates} duplicate(s) skipped`:""}. 2+ mode is now OFF for the next word.`);
   }else{
-    toast("All submitted pairs were already saved.");
+    toast("All selected pairs are already saved. Nothing new was submitted.");
   }
 }
 
-$("pairForm").addEventListener("submit",e=>{
-  e.preventDefault();
+function updateEditedPair(){
+  const word=$("mainWordInput").value.trim();
+  const chosen=[...selectedPrepositions];
 
-  const words=splitColumn($("mainWordsInput").value);
-  const preps=splitColumn($("prepositionsInput").value);
+  if(!word){
+    toast("Please enter a Main Word.");
+    return;
+  }
+  if(chosen.length!==1){
+    toast("Choose exactly one preposition to update this pair.");
+    return;
+  }
 
-  addPairsFromColumns(words,preps);
+  const existing=pairs.find(pair=>pair.id===editPairId);
+  if(!existing){
+    toast("The pair could not be found.");
+    resetImportForm();
+    return;
+  }
+
+  if(pairExists(word,chosen[0],editPairId)){
+    toast("This exact Main Word + Preposition pair already exists.");
+    return;
+  }
+
+  existing.word=word;
+  existing.preposition=chosen[0];
+  savePairs();
+  renderAll();
+  resetImportForm();
+  toast("Pair updated successfully.");
+}
+
+$("pairForm").addEventListener("submit",event=>{
+  event.preventDefault();
+  if($("prepositionPicker").hidden){
+    openPrepositionPicker(Boolean(editPairId));
+  }
 });
 
-$("clearFormBtn").addEventListener("click",clearForm);
+$("mainWordInput").addEventListener("keydown",event=>{
+  if(event.key!=="Enter") return;
+  event.preventDefault();
+  if($("prepositionPicker").hidden){
+    openPrepositionPicker(Boolean(editPairId));
+  }
+});
+
+$("mainWordInput").addEventListener("input",()=>{
+  const newWord=$("mainWordInput").value.trim();
+  if($("prepositionPicker").hidden) return;
+
+  if(editPairId){
+    activeWord=newWord;
+    if(activeLetter) renderPrepositionList();
+    else renderLetterGrid();
+  }else if(norm(newWord)!==norm(activeWord)){
+    activeWord="";
+    selectedPrepositions.clear();
+    $("prepositionPicker").hidden=true;
+  }
+});
+
+$("prepositionList").addEventListener("change",event=>{
+  const checkbox=event.target.closest('input[type="checkbox"][data-preposition]');
+  if(!checkbox) return;
+
+  const prep=checkbox.dataset.preposition;
+
+  if(editPairId){
+    selectedPrepositions.clear();
+    if(checkbox.checked) selectedPrepositions.add(prep);
+    renderPrepositionList();
+    return;
+  }
+
+  if(checkbox.checked){
+    selectedPrepositions.add(prep);
+  }else{
+    removeSelectedPreposition(prep);
+  }
+
+  if(!currentModeIsMultiple()){
+    saveOnePair(activeWord,prep);
+    return;
+  }
+
+  renderPrepositionList();
+});
+
+$("multiPrepToggle").addEventListener("change",()=>{
+  localStorage.setItem(MULTI_MODE_STORAGE_KEY,String(currentModeIsMultiple()));
+  selectedPrepositions.clear();
+  setModeDescription();
+  if(!$("prepositionPicker").hidden){
+    if(!$("prepositionOptionsView").hidden) renderPrepositionList();
+    else renderLetterGrid();
+  }
+});
+
+$("letterGrid").addEventListener("click",event=>{
+  const button=event.target.closest("button[data-letter]");
+  if(!button) return;
+  showLetterOptions(button.dataset.letter);
+});
+
+$("backToLettersBtn").addEventListener("click",showLetterGrid);
+
+$("saveSelectedBtn").addEventListener("click",saveSelectedPairs);
+$("clearFormBtn").addEventListener("click",resetImportForm);
 
 $("sampleBtn").addEventListener("click",()=>{
-  $("mainWordsInput").value=[
-    "Interested",
-    "Interested",
-    "Interested",
-    "Depend",
-    "Good",
-    "Angry",
-    "Proud",
-    "Afraid",
-    "Familiar",
-    "Believe"
-  ].join("\n");
-
-  $("prepositionsInput").value=[
-    "in",
-    "about",
-    "of",
-    "on",
-    "at",
-    "with",
-    "of",
-    "of",
-    "with",
-    "in"
-  ].join("\n");
-
-  updateWordGuide();
-  toast("Example data loaded. Press Save Pair(s) to import it.");
+  if(editPairId) resetImportForm();
+  $("multiPrepToggle").checked=true;
+  setModeDescription();
+  $("mainWordInput").value="Accustomed";
+  openPrepositionPicker();
+  toast("Example loaded. Browse letters, select prepositions (even across letters), then press Save Selected.");
 });
 
 /* -------------------------------------------------------
@@ -976,14 +1495,18 @@ function editPair(id){
   if(!pair) return;
 
   editPairId=id;
+  activeWord=pair.word;
+  selectedPrepositions=new Set([pair.preposition]);
 
-  $("mainWordsInput").value=pair.word;
-  $("prepositionsInput").value=pair.preposition;
-
+  $("mainWordInput").value=pair.word;
   $("formTitle").textContent="Edit Word–Preposition Pair";
-  $("savePairBtn").textContent="✓ Update Pair";
+  $("multiPrepToggle").disabled=true;
+  $("prepositionPicker").hidden=false;
+  $("letterPickerView").hidden=false;
+  $("prepositionOptionsView").hidden=true;
+  renderLetterGrid();
+  showLetterOptions(firstLetter(pair.preposition));
 
-  updateWordGuide();
   switchTab("add");
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -994,8 +1517,9 @@ function deletePair(id){
 
   if(!confirm(`Delete "${pair.word} → ${pair.preposition}"?`)) return;
 
-  delete learning[qid(pair)];
+  const oldKey=qid(pair);
   pairs=pairs.filter(p=>p.id!==id);
+  delete learning[oldKey];
 
   savePairs();
   saveLearning();
@@ -1051,8 +1575,10 @@ function renderPairs(){
     const state=statusText(pair);
 
     const stateClass=state.startsWith("Corrected")
-      ?"green"
-      :state==="Mistaken"?"red":"";
+      ? "green"
+      : state==="Mistaken"
+        ? "red"
+        : "";
 
     return `
       <div class="word-card">
@@ -1093,22 +1619,40 @@ $("showAllBtn").addEventListener("click",()=>{
   renderPairs();
 });
 
+$("deleteAllWordsBtn").addEventListener("click",()=>{
+  if(!pairs.length){toast("Vocabulary is already empty.");return;}
+  const ok=confirm(`Delete ALL ${pairs.length} saved Word–Preposition pairs and all their learning progress? This cannot be undone. Export a backup first if needed.`);
+  if(!ok) return;
+  pairs=[];
+  learning={};
+  savePairs();
+  saveLearning();
+  renderAll();
+  toast("All vocabulary pairs and learning progress have been deleted.");
+});
+
 /* -------------------------------------------------------
    MCQ GENERATION
-
-   For each current Main Word:
-   - Collect all its prepositions.
-   - Select one as the correct answer.
-   - Exclude all its other prepositions from distractors.
-   - Use distractors only from other Main Words.
-   - Require 3 unique valid distractors.
 ------------------------------------------------------- */
+
+/*
+  IMPORTANT DISTRACTOR RULE:
+
+  For every question:
+  1. Find every preposition belonging to the current Main Word.
+  2. Select one as the correct answer.
+  3. Exclude ALL of that Main Word's prepositions from distractors.
+  4. Take distractors only from other Main Words.
+  5. Remove duplicates.
+  6. If three valid distractors are unavailable, omit the question.
+*/
 
 function createQuestion(pair){
   const currentWord=norm(pair.word);
   const correct=String(pair.preposition).trim();
   const correctKey=norm(correct);
 
+  // Collect ALL prepositions belonging to this Main Word.
   const ownPrepositionMap=new Map();
 
   pairs.forEach(p=>{
@@ -1124,18 +1668,26 @@ function createQuestion(pair){
   const ownPrepositions=[...ownPrepositionMap.values()];
   const ownPrepositionKeys=new Set(ownPrepositionMap.keys());
 
+  // Collect distractors exclusively from OTHER Main Words.
   const distractorMap=new Map();
 
   pairs.forEach(p=>{
-    if(norm(p.word)===currentWord) return;
+    if(norm(p.word)===currentWord){
+      return;
+    }
 
-    const candidate=String(p.preposition||"").trim();
+    const candidate=String(p.preposition || "").trim();
     const candidateKey=norm(candidate);
 
     if(!candidateKey) return;
+
+    // Exclude the correct answer.
     if(candidateKey===correctKey) return;
+
+    // Exclude ALL prepositions of this Main Word.
     if(ownPrepositionKeys.has(candidateKey)) return;
 
+    // Only one copy of each option.
     if(!distractorMap.has(candidateKey)){
       distractorMap.set(candidateKey,candidate);
     }
@@ -1143,14 +1695,19 @@ function createQuestion(pair){
 
   const distractors=shuffle([...distractorMap.values()]);
 
-  // Do not create a question if three valid distractors are unavailable.
-  if(distractors.length<3) return null;
+  // Never invent distractors.
+  if(distractors.length<3){
+    return null;
+  }
+
+  const selectedDistractors=distractors.slice(0,3);
 
   const options=shuffle([
     correct,
-    ...distractors.slice(0,3)
+    ...selectedDistractors
   ]);
 
+  // Exactly four different options.
   if(options.length!==4 || new Set(options.map(norm)).size!==4){
     return null;
   }
@@ -1165,7 +1722,9 @@ function createQuestion(pair){
 }
 
 function generateQuestions(){
-  return pairs.map(createQuestion).filter(Boolean);
+  return pairs
+    .map(pair=>createQuestion(pair))
+    .filter(Boolean);
 }
 
 /* -------------------------------------------------------
@@ -1175,7 +1734,7 @@ function generateQuestions(){
 function recordAnswer(question,isCorrect){
   const key=question.id;
 
-  const previous=learning[key]||{
+  const previous=learning[key] || {
     attempts:0,
     correct:0,
     wrong:0,
@@ -1185,6 +1744,7 @@ function recordAnswer(question,isCorrect){
   };
 
   const item={...previous};
+
   item.attempts=(item.attempts||0)+1;
 
   if(isCorrect){
@@ -1216,7 +1776,7 @@ function recordAnswer(question,isCorrect){
 }
 
 /* -------------------------------------------------------
-   RANDOM 4:1:5 SCHEDULING
+   4:1:5 SCHEDULING
 ------------------------------------------------------- */
 
 function scheduleQuestions(allQuestions){
@@ -1224,37 +1784,55 @@ function scheduleQuestions(allQuestions){
 
   if($("quizOrder").value==="serial"){
     const serial=[...allQuestions].sort((a,b)=>{
-      const result=a.word.localeCompare(b.word);
-      return result || a.correct.localeCompare(b.correct);
+      const wordCompare=a.word.localeCompare(b.word);
+
+      return wordCompare || a.correct.localeCompare(b.correct);
     });
 
-    const setting=$("quizCount").value;
-    const target=setting==="all"
-      ?serial.length
-      :Math.min(Number(setting),serial.length);
+    const countValue=$("quizCount").value;
+
+    const target=countValue==="all"
+      ? serial.length
+      : Math.min(Number(countValue),serial.length);
 
     return serial.slice(0,target);
   }
 
   const pools={
     new:shuffle(allQuestions.filter(q=>
-      getLearningStatus({word:q.word,preposition:q.correct})==="new"
+      getLearningStatus({
+        word:q.word,
+        preposition:q.correct
+      })==="new"
     )),
+
     corrected:shuffle(allQuestions.filter(q=>
-      getLearningStatus({word:q.word,preposition:q.correct})==="corrected"
+      getLearningStatus({
+        word:q.word,
+        preposition:q.correct
+      })==="corrected"
     )),
+
     mistaken:shuffle(allQuestions.filter(q=>
-      getLearningStatus({word:q.word,preposition:q.correct})==="mistaken"
+      getLearningStatus({
+        word:q.word,
+        preposition:q.correct
+      })==="mistaken"
     )),
+
     seen:shuffle(allQuestions.filter(q=>
-      getLearningStatus({word:q.word,preposition:q.correct})==="seen"
+      getLearningStatus({
+        word:q.word,
+        preposition:q.correct
+      })==="seen"
     ))
   };
 
-  const setting=$("quizCount").value;
-  const target=setting==="all"
-    ?allQuestions.length
-    :Math.min(Number(setting),allQuestions.length);
+  const countValue=$("quizCount").value;
+
+  const target=countValue==="all"
+    ? allQuestions.length
+    : Math.min(Number(countValue),allQuestions.length);
 
   const ratioSlots=[
     "new","new","new","new",
@@ -1268,12 +1846,14 @@ function scheduleQuestions(allQuestions){
   function takeFrom(bucket){
     const pool=pools[bucket];
 
-    while(pool && pool.length){
-      const q=pool.shift();
+    if(!pool) return null;
 
-      if(!used.has(q.id)){
-        used.add(q.id);
-        return q;
+    while(pool.length){
+      const question=pool.shift();
+
+      if(!used.has(question.id)){
+        used.add(question.id);
+        return question;
       }
     }
 
@@ -1283,21 +1863,29 @@ function scheduleQuestions(allQuestions){
   const fallbackOrder=["mistaken","new","corrected","seen"];
 
   for(let i=0;i<target;i++){
-    let chosen=takeFrom(ratioSlots[i%ratioSlots.length]);
+    const preferred=ratioSlots[i%ratioSlots.length];
+
+    let chosen=takeFrom(preferred);
 
     if(!chosen){
       for(const bucket of fallbackOrder){
         chosen=takeFrom(bucket);
+
         if(chosen) break;
       }
     }
 
     if(!chosen){
-      chosen=allQuestions.find(q=>!used.has(q.id))||null;
-      if(chosen) used.add(chosen.id);
+      chosen=allQuestions.find(q=>!used.has(q.id)) || null;
+
+      if(chosen){
+        used.add(chosen.id);
+      }
     }
 
-    if(chosen) output.push(chosen);
+    if(chosen){
+      output.push(chosen);
+    }
   }
 
   return output;
@@ -1357,6 +1945,7 @@ function startQuiz(){
 
   renderQuestion();
 
+  // Put the first question near the top of the screen.
   $("quizPlay").scrollIntoView({
     behavior:"smooth",
     block:"start"
@@ -1364,6 +1953,7 @@ function startQuiz(){
 }
 
 $("startQuizBtn").addEventListener("click",startQuiz);
+
 $("quizCount").addEventListener("change",updateQuizReadiness);
 $("quizOrder").addEventListener("change",updateQuizReadiness);
 
@@ -1379,7 +1969,7 @@ function renderQuestion(){
     return;
   }
 
-  const savedAnswer=quiz.answers[quiz.index]||null;
+  const savedAnswer=quiz.answers[quiz.index] || null;
 
   quiz.locked=Boolean(savedAnswer);
 
@@ -1391,15 +1981,19 @@ function renderQuestion(){
   $("progressBar").style.width=
     (quiz.index/quiz.questions.length*100)+"%";
 
-  // Capitalize the Main Word on display only.
+  /*
+    Capitalization change:
+    The Main Word is displayed with its first letter capitalized.
+    The stored word remains unchanged.
+  */
   $("questionTitle").innerHTML=`
     Which preposition is appropriate with
     <span class="question-word">"${esc(capitalizeFirst(q.word))}"</span>?
   `;
 
   $("questionHint").textContent=savedAnswer
-    ?"Your previous answer and reference are shown below."
-    :"Choose one correct Preposition.";
+    ? "Your previous answer and reference are shown below."
+    : "Choose one correct preposition.";
 
   $("optionsBox").innerHTML=q.options.map((option,index)=>`
     <button class="option" data-option="${index}" type="button">
@@ -1416,8 +2010,8 @@ function renderQuestion(){
 
   $("nextQuestionBtn").textContent=
     quiz.index===quiz.questions.length-1
-      ?"Show Result →"
-      :"Next →";
+      ? "Show Result →"
+      : "Next →";
 
   $("skipQuestionBtn").disabled=Boolean(savedAnswer);
 
@@ -1429,6 +2023,15 @@ function renderQuestion(){
 /* -------------------------------------------------------
    AUTOMATIC SCROLL TO EXPLANATION
 ------------------------------------------------------- */
+
+/*
+  After an MCQ is answered, the reference box is rendered below
+  the options. This function automatically scrolls the viewport
+  to that exact box.
+
+  A short timeout lets the browser finish rendering the new
+  explanation content before scrolling.
+*/
 
 function scrollToExplanation(){
   setTimeout(()=>{
@@ -1475,22 +2078,25 @@ function renderQuestionAnswer(q,answer){
   feedback.className="feedback show "+(answer.correct?"good":"bad");
 
   const heading=answer.skipped
-    ?"Question skipped."
-    :answer.correct
-      ?"✓ Correct answer!"
-      :"✕ Incorrect answer.";
+    ? "Question skipped."
+    : answer.correct
+      ? "✓ Correct answer!"
+      : "✕ Incorrect answer.";
 
   const referenceItems=q.allPrepositions.map(prep=>{
-    const selected=norm(prep)===norm(q.correct);
+    const isSelected=norm(prep)===norm(q.correct);
 
     return `
-      <span class="reference-item ${selected?"selected":""}">
-        ${selected?"✓ ":""}${esc(prep)}
-        ${selected?"— this question's answer":""}
+      <span class="reference-item ${isSelected?"selected":""}">
+        ${isSelected?"✓ ":""}${esc(prep)}
+        ${isSelected?"— this question's answer":""}
       </span>
     `;
   }).join("");
 
+  /*
+    The Main Word in this reference box is also capitalized.
+  */
   feedback.innerHTML=`
     <b>${heading}</b>
 
@@ -1500,6 +2106,7 @@ function renderQuestionAnswer(q,answer){
     </p>
 
     <div class="reference-box">
+
       <h3>Main Word: ${esc(capitalizeFirst(q.word))}</h3>
 
       <p>All prepositions imported for this Main Word:</p>
@@ -1513,6 +2120,7 @@ function renderQuestionAnswer(q,answer){
         particular question. The other prepositions are shown only
         as a reference list; they are not additional answers to this MCQ.
       </p>
+
     </div>
   `;
 
@@ -1520,7 +2128,10 @@ function renderQuestionAnswer(q,answer){
   $("skipQuestionBtn").disabled=true;
   $("liveScore").textContent=quiz.correct;
 
-  // Automatically scroll to the reference after the answer.
+  /*
+    Automatically scroll down after rendering the explanation.
+    This also works when returning to an already answered question.
+  */
   scrollToExplanation();
 }
 
@@ -1534,6 +2145,7 @@ $("optionsBox").addEventListener("click",e=>{
   if(!button || quiz.locked) return;
 
   const q=quiz.questions[quiz.index];
+
   const pickedIndex=Number(button.dataset.option);
   const picked=q.options[pickedIndex];
 
@@ -1554,6 +2166,7 @@ $("optionsBox").addEventListener("click",e=>{
   }
 
   recordAnswer(q,correct);
+
   renderQuestionAnswer(q,quiz.answers[quiz.index]);
 });
 
@@ -1572,6 +2185,7 @@ $("skipQuestionBtn").addEventListener("click",()=>{
   };
 
   recordAnswer(q,false);
+
   renderQuestionAnswer(q,quiz.answers[quiz.index]);
 });
 
@@ -1593,6 +2207,7 @@ $("nextQuestionBtn").addEventListener("click",()=>{
   quiz.index++;
   renderQuestion();
 
+  // Keep the next MCQ visible near the top.
   $("quizPlay").scrollIntoView({
     behavior:"smooth",
     block:"start"
@@ -1611,8 +2226,8 @@ function finishQuiz(){
   const attempted=quiz.correct+quiz.wrong;
 
   const percentage=total
-    ?Math.round((quiz.correct/total)*100)
-    :0;
+    ? Math.round((quiz.correct/total)*100)
+    : 0;
 
   $("quizResult").innerHTML=`
     <div class="card result">
@@ -1622,7 +2237,10 @@ function finishQuiz(){
       </div>
 
       <h2>Test Completed!</h2>
-      <p class="sub">Your result is shown below.</p>
+
+      <p class="sub">
+        Your result is shown below.
+      </p>
 
       <div class="score-circle">
         <div>
@@ -1650,9 +2268,12 @@ function finishQuiz(){
 
       </div>
 
-      <p>Total ${total} questions · Attempted ${attempted}</p>
+      <p>
+        Total ${total} questions · Attempted ${attempted}
+      </p>
 
       <div class="actions" style="justify-content:center">
+
         <button class="btn primary" id="retryQuizBtn" type="button">
           Try Again ↻
         </button>
@@ -1660,6 +2281,7 @@ function finishQuiz(){
         <button class="btn" id="backSetupBtn" type="button">
           Back to Settings
         </button>
+
       </div>
     </div>
   `;
@@ -1743,6 +2365,7 @@ function mergeImportedPair(word,preposition){
 
 $("backupFile").addEventListener("change",async e=>{
   const file=e.target.files?.[0];
+
   if(!file) return;
 
   try{
@@ -1752,10 +2375,10 @@ $("backupFile").addEventListener("change",async e=>{
       const backup=JSON.parse(content);
 
       const incoming=Array.isArray(backup)
-        ?backup
-        :Array.isArray(backup.pairs)
-          ?backup.pairs
-          :null;
+        ? backup
+        : Array.isArray(backup.pairs)
+          ? backup.pairs
+          : null;
 
       if(!incoming){
         throw new Error("This JSON file does not contain a valid pairs list.");
@@ -1764,7 +2387,10 @@ $("backupFile").addEventListener("change",async e=>{
       let added=0;
 
       incoming.forEach(item=>{
-        if(item && mergeImportedPair(item.word,item.preposition)){
+        if(
+          item &&
+          mergeImportedPair(item.word,item.preposition)
+        ){
           added++;
         }
       });
@@ -1787,6 +2413,7 @@ $("backupFile").addEventListener("change",async e=>{
 
       lines.forEach(line=>{
         const clean=line.trim();
+
         if(!clean) return;
 
         let parts;
@@ -1836,7 +2463,10 @@ function switchTab(name){
   });
 
   document.querySelectorAll(".panel").forEach(panel=>{
-    panel.classList.toggle("active",panel.id==="panel-"+name);
+    panel.classList.toggle(
+      "active",
+      panel.id==="panel-"+name
+    );
   });
 
   if(name==="quiz"){
@@ -1845,7 +2475,9 @@ function switchTab(name){
 }
 
 document.querySelectorAll(".tab").forEach(tab=>{
-  tab.addEventListener("click",()=>switchTab(tab.dataset.tab));
+  tab.addEventListener("click",()=>{
+    switchTab(tab.dataset.tab);
+  });
 });
 
 /* -------------------------------------------------------
@@ -1858,12 +2490,25 @@ function setTheme(dark){
   $("themeToggleBtn").textContent=
     dark?"☀️ Light Mode":"🌙 Dark Mode";
 
-  $("themeToggleBtn").setAttribute("aria-pressed",String(dark));
+  $("themeToggleBtn").setAttribute(
+    "aria-pressed",
+    String(dark)
+  );
 
-  localStorage.setItem(THEME_STORAGE_KEY,dark?"dark":"light");
+  localStorage.setItem(
+    THEME_STORAGE_KEY,
+    dark?"dark":"light"
+  );
 }
 
-setTheme(localStorage.getItem(THEME_STORAGE_KEY)==="dark");
+// Restore the current mode if the user reloads before submitting a word.
+// A successful multi-preposition submission explicitly persists OFF.
+$("multiPrepToggle").checked=localStorage.getItem(MULTI_MODE_STORAGE_KEY)==="true";
+setModeDescription();
+
+setTheme(
+  localStorage.getItem(THEME_STORAGE_KEY)==="dark"
+);
 
 $("themeToggleBtn").addEventListener("click",()=>{
   setTheme(!document.body.classList.contains("dark"));
@@ -1872,6 +2517,27 @@ $("themeToggleBtn").addEventListener("click",()=>{
 /* -------------------------------------------------------
    HELP MODAL
 ------------------------------------------------------- */
+
+$("npBtn").addEventListener("click",()=>{
+  $("npModal").classList.add("show");
+  $("newPrepInput").value="";
+  setTimeout(()=>$ ("newPrepInput").focus(),30);
+});
+$("closeNpBtn").addEventListener("click",()=>$("npModal").classList.remove("show"));
+$("npModal").addEventListener("click",e=>{if(e.target===$("npModal")) $("npModal").classList.remove("show");});
+$("npForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const prep=$("newPrepInput").value.trim().replace(/\s+/g," ");
+  if(!prep){toast("Enter a preposition first.");return;}
+  const all=[...PREPOSITION_MASTER_LIST,...customPrepositions];
+  if(all.some(item=>norm(item)===norm(prep))){toast("This preposition is already in the list.");return;}
+  customPrepositions.push(prep);
+  saveCustomPrepositions();
+  $("npModal").classList.remove("show");
+  // The new item is grouped automatically by its first letter in the letter picker.
+  if($("mainWordInput") && $("mainWordInput").value.trim()){renderLetterGrid();}
+  toast(`“${prep}” added under letter ${firstLetter(prep)}.`);
+});
 
 $("helpBtn").addEventListener("click",()=>{
   $("helpModal").classList.add("show");
@@ -1912,7 +2578,6 @@ function renderAll(){
   updateQuizReadiness();
 }
 
-updateWordGuide();
 renderAll();
 
 })();
