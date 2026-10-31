@@ -737,7 +737,7 @@ body.dark ::selection{background:#5146e5;color:white}
           containing one pair per line.
         </p>
 
-        <div class="file-drop">
+        <div class="file-drop">      
           <div class="big">📄</div>
           <strong>Choose a JSON or TXT file</strong>
           <p>JSON restores pairs and learning progress; TXT imports pairs.</p>
@@ -1057,15 +1057,16 @@ if(!Array.isArray(customPrepositions)) customPrepositions=[];
 function saveCustomPrepositions(){localStorage.setItem(CUSTOM_PREP_STORAGE_KEY,JSON.stringify(customPrepositions));}
 
 const PREPOSITION_MASTER_LIST=[
-  "above","across","after","against","along","among","around","at","away from",
+  "at","above","after","against","along","among","around","across","away from",
   "before","behind","below","beneath","beside","between","by",
   "down","during",
   "for","from",
   "in","in front of","inside","into",
   "near","next to",
-  "off","on","onto","out of","outside","over",
-  "through","till","to","toward / towards",
+  "of","on","onto","out of","off","outside","over",
+  "to","toward","through","till","towards",
   "under","underneath","until","up"
+  "With"
 ];
 
 function firstLetter(value){
